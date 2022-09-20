@@ -1,13 +1,13 @@
 from nodo import Nodo
+import pandas as PS
 
 class Arbol:
-    # Funciones privadas
     def __init__(self, dato):
         self.raiz = Nodo(dato)
 
     def __agregar_recursivo(self, nodo, dato):
         if dato < nodo.dato:
-            if nodo.izquierda is None:
+            if nodo.derecha is None:
                 nodo.izquierda = Nodo(dato)
             else:
                 self.__agregar_recursivo(nodo.izquierda, dato)
@@ -64,6 +64,9 @@ class Arbol:
         print("Imprimiendo árbol postorden: ")
         self.__postorden_recursivo(self.raiz)
         print("")
+
+    def buscar(self, busqueda):
+        return self.__buscar(self.raiz, busqueda)
 
     def buscar(self, busqueda):
         return self.__buscar(self.raiz, busqueda)

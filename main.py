@@ -4,7 +4,7 @@
 
 from arbol import Arbol
 
-arbol = Arbol("Luis")
+arbol = Arbol("Carla")
 arbol.agregar("María José")
 arbol.agregar("Maggie")
 arbol.agregar("Leon")
